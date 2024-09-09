@@ -1,0 +1,271 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  z-index: 100;
+  background-color: #0a1130;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  visibility: visible;
+  width: 37%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: transform 400ms cubic-bezier(0, 0, 0.22, 1.02),
+    visibility 300ms ease, opacity 250ms ease;
+}
+
+.loader.closex {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0, 0);
+}
+
+.loader.expand {
+  transform: scale(0, 0);
+}
+
+.logo-c {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #0a1130;
+}
+
+.xx {
+  z-index: 3;
+  position: absolute;
+  display: block;
+  background-color: #8acdee;
+}
+
+.up,
+.down {
+  height: 2%;
+  width: 101%;
+}
+
+.up.mmk,
+.down.mmk {
+  width: 0;
+}
+
+.left,
+.right {
+  width: 2%;
+  height: 101%;
+}
+
+.left.mmk,
+.right.mmk {
+  height: 0;
+}
+
+.up {
+  transition: width 500ms linear;
+  top: 0;
+  right: 0;
+}
+
+.left {
+  transition: height 500ms linear 1000ms;
+  left: 0%;
+  top: 0;
+}
+
+.down {
+  transition: width 500ms linear 1500ms;
+  bottom: 0;
+  left: 0;
+}
+
+.right {
+  bottom: 0%;
+  right: 0%;
+  transition: height 500ms linear 2000ms;
+}
+
+.img-con {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.text-c {
+  margin-left: 4%;
+  overflow: hidden;
+
+  width: 50%;
+  transition: width 1000ms ease, margin 1000ms ease;
+}
+
+.text-c.ffk {
+  width: 0%;
+  margin-left: 0%;
+}
+
+.text-cc {
+  text-wrap: nowrap;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(0);
+  transition: transform 1000ms ease;
+  animation: blink 0.9s linear 2.3s 1;
+}
+
+.text-c.ffk .text-cc {
+  transform: translateX(-200px);
+}
+
+.text-a {
+  color: #8acdee;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif !important;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  letter-spacing: 13px;
+}
+
+.text-b {
+  color: #fdfdfd;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: lowercase;
+}
+
+@keyframes blink {
+  70% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  93% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-c {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text-c {
+    width: 70%;
+  }
+
+  .loader {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .loader {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .loader {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .logo-c {
+    width: 80px;
+    height: 80px;
+  }
+
+  .loader {
+    width: 65%;
+  }
+
+  .text-a {
+    font-size: 2rem;
+  }
+
+  .text-b {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .logo-c {
+    width: 70px;
+    height: 70px;
+  }
+
+  .loader {
+    width: 70%;
+  }
+
+  .text-a {
+    font-size: 1.8rem;
+  }
+
+  .text-b {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo-c {
+    width: 60px;
+    height: 60px;
+  }
+
+  .text-a {
+    font-size: 1.5rem;
+  }
+
+  .text-b {
+    font-size: 1.3rem;
+  }
+}
