@@ -1031,8 +1031,6 @@ textarea:focus~input.submit {
         flex-wrap: wrap;
     }
 
-    form {}
-
     .contact-p {
         width: 70%;
         text-align: center;
