@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 1000,
             delay: 500,
             easing: "cubic-bezier(0.5, 0, 0, 1)",
-            reset: true,
+            // reset: true,
         });
 
         sr.reveal(".home-container-1", { delay: 0, origin: "left" });
