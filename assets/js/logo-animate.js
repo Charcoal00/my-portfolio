@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             delay: 0,
             interval: 400,
         });
-        sr.reveal("#percentage1, #percentage3, input[type=text], textarea", {
+        sr.reveal("#percentage1, #percentage3, #percentage5, input[type=text], textarea", {
             origin: "left",
         });
         sr.reveal("#percentage4, #percentage2, input[type=email]", {
@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
             delay: 500,
             distance: "20%",
             interval: 400,
+        });
+        sr.reveal(".contact-p", {
+            delay: 0,
+            distance: "10%",
+            origin: "top",
         });
     }, 5300);
 });

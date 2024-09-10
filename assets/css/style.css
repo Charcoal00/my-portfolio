@@ -167,7 +167,7 @@ span a {
     top: 3vh;
     right: -100%;
     width: 80%;
-    height: 94vh;
+    height: 80vh;
     border-radius: 8px;
     background-color: var(--base-color);
     border: 1px solid var(--secondary-color);
@@ -434,15 +434,15 @@ button>span {
 .home_con-1 span::before {
     border-top-right-radius: 20%;
     border-bottom-left-radius: 20%;
-    top: -3%;
-    left: -3%;
+    top: -2%;
+    left: -2%;
 }
 
 .home_con-1 span::after {
     border-top-right-radius: 20%;
     border-bottom-left-radius: 20%;
-    bottom: -3%;
-    right: -3%;
+    bottom: -2%;
+    right: -2%;
 }
 
 .home_con-1 span img {
@@ -466,6 +466,16 @@ button>span {
     width: var(--size4);
     height: var(--size4);
     color: var(--primary-color);
+}
+
+.nav_1 span:hover,
+.footer ul span:hover {
+    color: var(--secondary-color);
+}
+
+.nav_1 span,
+.footer ul span {
+    transition: color 250ms ease;
 }
 
 .underline {
@@ -517,7 +527,6 @@ button>span {
 .about2,
 .skills-container {
     text-transform: capitalize;
-    text-align: center;
 }
 
 .about2 h2,
@@ -528,8 +537,15 @@ button>span {
 
 .about2 p,
 .skill-a p {
-    line-height: var(--size3);
+    line-height: var(--size2);
     font-size: var(--small);
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.about2 p a {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .skills {
@@ -743,7 +759,15 @@ button>span {
     margin-top: var(--size7);
 }
 
-form {
+.contact-p {
+    text-align: left;
+    font-size: var(--small);
+    margin-bottom: var(--size2);
+    color: var(--primary-color);
+}
+
+form,
+.contact-p {
     width: 100%;
 }
 
@@ -752,7 +776,7 @@ textarea {
     border-radius: 10px;
     font-family: inherit;
     font-size: var(--small);
-    font-weight: var(--thick-font-weight);
+    font-weight: var(--font-weight);
     text-transform: capitalize;
     position: relative;
     outline: none;
@@ -781,7 +805,7 @@ input::placeholder,
 textarea::placeholder {
     transition: color 300s ease;
     color: var(--secondary-color);
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 input.submit {
@@ -812,8 +836,21 @@ textarea:focus~input.submit {
     margin-bottom: var(--size4);
 }
 
-.footer p {
-    opacity: 0.6;
+.footer .lll {
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+.footer .ppp {
+    width: 90%;
+    text-transform: none;
+    margin-bottom: var(--size3);
+    opacity: 1;
+}
+
+.footer p a {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .footer ul {
@@ -850,6 +887,13 @@ textarea:focus~input.submit {
     height: var(--size6);
     background-color: var(--secondary-color);
     color: var(--base-color);
+    transition: all 300ms ease;
+}
+
+.resume span:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--base-color);
 }
 
 
@@ -864,7 +908,7 @@ textarea:focus~input.submit {
     }
 }
 
-@keyframes blink {
+@keyframes blinkk {
 
     0% {
         height: var(--size3);
@@ -903,7 +947,7 @@ textarea:focus~input.submit {
     margin-left: 4px;
     width: 3px;
     background-color: var(--secondary-color);
-    animation: blink 0.5s linear infinite alternate;
+    animation: blinkk 0.5s linear infinite alternate;
 }
 
 
@@ -964,9 +1008,12 @@ textarea:focus~input.submit {
         flex-wrap: wrap;
     }
 
-    form {
+    form {}
+
+    .contact-p {
         width: 70%;
-        margin: 0 auto;
+        text-align: center;
+        margin: 0 auto var(--size4) auto;
     }
 }
 
@@ -1030,10 +1077,14 @@ textarea:focus~input.submit {
         margin-top: var(--size3);
     }
 
-    .skills-container>div,
+
     .about-container>div {
 
         width: 60%;
+    }
+
+    .skills-container>div {
+        width: 50%;
     }
 
     .about-container>div {
@@ -1041,7 +1092,7 @@ textarea:focus~input.submit {
     }
 
     .skill-a {
-        width: 35% !important;
+        width: 45% !important;
     }
 
     .about1 span {
@@ -1074,9 +1125,21 @@ textarea:focus~input.submit {
     .home_con-1 span {
         width: 300px;
     }
+
+    .footer .ppp {
+        width: 85%;
+    }
+
+    .skills-b {
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 1200px) {
+    .footer .ppp {
+        width: 70%;
+    }
+
     .main-1 {
         margin-top: var(--size5);
         width: 75%;
@@ -1097,6 +1160,11 @@ textarea:focus~input.submit {
 
 }
 
+@media screen and (min-width: 500px) {
+    .navcontainer2 {
+        width: 60%;
+    }
+}
 
 @media screen and (min-width: 866px) {
     .navcontainer2 {
@@ -1120,6 +1188,12 @@ textarea:focus~input.submit {
 
     .navcontainer3 {
         display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer .ppp {
+        text-align: left;
     }
 }
 
