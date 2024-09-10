@@ -800,7 +800,7 @@ textarea {
     font-family: inherit;
     font-size: var(--small);
     font-weight: var(--font-weight);
-    text-transform: capitalize;
+    text-transform: none;
     position: relative;
     outline: none;
     border: transparent;
