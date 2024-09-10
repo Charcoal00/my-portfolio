@@ -900,8 +900,8 @@ textarea:focus~input.submit {
 
 .resume {
     position: fixed;
-    bottom: 2.5%;
-    right: 5%;
+    bottom: 6%;
+    right: 6%;
     z-index: var(--ahead);
     animation: up-down 1s ease-in-out infinite alternate;
 }
