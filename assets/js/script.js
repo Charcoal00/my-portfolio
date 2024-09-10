@@ -1,10 +1,24 @@
-
-
 //the rest
 const menuBtn = document.getElementById("menu-btn");
-menuBtn.addEventListener("click", () => {
+const boddy = document.querySelector("body");
+const navcontain = document.querySelector(".navcontainer2");
+menuBtn.addEventListener("click", (event) => {
     document.querySelector(".navcontainer3").classList.toggle("open");
     document.querySelector(".navcontainer2").classList.toggle("open-cont");
+    boddy.classList.toggle("bhbh");
+    event.stopPropagation();
+});
+document.addEventListener("click", (event) => {
+    if (!navcontain.contains(event.target)) {
+        setTimeout(function () {
+            document.querySelector(".navcontainer3").classList.remove("open");
+            document
+                .querySelector(".navcontainer2")
+                .classList.remove("open-cont");
+
+            boddy.classList.remove("bhbh");
+        }, 100);
+    }
 });
 
 const navLink = document.querySelectorAll(".link-link a");
@@ -16,6 +30,8 @@ navLink.forEach((n) =>
             document
                 .querySelector(".navcontainer2")
                 .classList.remove("open-cont");
+
+            boddy.classList.remove("bhbh");
         }, 500);
     })
 );
@@ -48,5 +64,3 @@ const scrollActive = () => {
     });
 };
 window.addEventListener("scroll", scrollActive);
-
-

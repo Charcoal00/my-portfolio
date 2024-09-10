@@ -124,6 +124,29 @@ span a {
     --delay1: 200ms;
 }
 
+.bhbh {
+    overflow: hidden !important;
+}
+
+.home,
+.about,
+.contact,
+.footer,
+.skills,
+.work {
+    filter: blur(0px);
+    transition: filter 300ms ease 500ms;
+}
+
+.bhbh .home,
+.bhbh .about,
+.bhbh .skills,
+.bhbh .work,
+.bhbh .contact,
+.bhbh .footer {
+    filter: blur(3px);
+}
+
 .headder-1 {
     background-color: var(--base-color);
     width: 100%;
@@ -229,7 +252,7 @@ span a {
 
 .link-link a::before {
     left: 50%;
-    bottom: -10%;
+    bottom: -15%;
     border-radius: 10px;
     height: 3px;
     width: 0%;
