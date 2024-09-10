@@ -140,7 +140,7 @@ img {
   align-items: center;
   transform: translateX(0);
   transition: transform 1000ms ease;
-  animation: blink 0.9s linear 2.3s 1;
+  animation: blink 0.9s linear 2.6s 1;
 }
 
 .text-c.ffk .text-cc {

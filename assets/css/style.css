@@ -414,7 +414,7 @@ button>span {
 .home_con-1 span {
     margin-right: 10px;
     width: 150px;
-    height: 150px;
+    height: auto;
     position: relative;
     border-top-right-radius: 20%;
     border-bottom-left-radius: 20%;

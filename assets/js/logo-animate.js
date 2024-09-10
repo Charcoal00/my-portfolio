@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
     setTimeout(() => {
         document.querySelector(".loader").classList.add("closex");
-        document.querySelector(".container").style.display = "none";
 
-        
-        document.getElementById("main").style.display = "block";
-        document.getElementById("headder").style.display = "block";
+        setTimeout(() => {
+            document.querySelector(".container").style.display = "none";
+            document.getElementById("main").style.display = "block";
+            document.getElementById("headder").style.display = "block";
+        }, 200);
     }, 5000);
 
     setTimeout(() => {
-        
         document.getElementById("main").style.opacity = "1";
         document.getElementById("headder").style.opacity = "1";
 
