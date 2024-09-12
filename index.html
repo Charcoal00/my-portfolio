@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://code-savant.netlify.app" />
     <meta property="og:image" content="https://code-savant.netlify.app/assets/image/Code savant.png" />
     <meta property="og:description"
-        content="Christopher Wise, a professional web developer with expertise in HTML, CSS, JS, and UI/UX design." />
+        content="Christopher Wise, a frontend developer || aspiring fullstack developer building the frontend of website and web applications for the.... Read more" />
     <meta property="og:site_name" content="Code Savant" />
     <meta property="og:locale" content="en_US" />
 
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Code Savant - Web Developer" />
     <meta name="twitter:description"
-        content="Explore the portfolio of Christopher Wise, a web developer with a passion for HTML, CSS, JS, and UI/UX design." />
+        content="Christopher Wise, a frontend developer || aspiring fullstack developer building the frontend of website and web applications for the.... Read more" />
     <meta name="twitter:image" content="https://code-savant.netlify.app/assets/image/Code savant.png" />
     <meta name="twitter:site" content="@WiseChrist28493" />
     <meta name="keywords" content="Code Savant, Web Developer, HTML, CSS, JavaScript, UI/UX, React, Christopher Wise" />
@@ -296,13 +296,16 @@
 
             <h2 class="underline">send me a message!</h2>
             <p class="contact-p">Got a question or proposal, or you want to say hello? Go ahead.</p>
-            <form action="https://nocodeform.io/f/66e0c5e896dcadbf84bbd50d" method="POST">
-                <input type="text" name="full-name" id="full-name" placeholder="Enter your name"  required/>
-                <input type="email" name="email" id="email" placeholder="Enter Your email address"  required/>
+            <form name="Message request Cd-savant" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="success.html">
+                <input name="bot-field" style="display: none;">
+                <input type="text" name="name" id="full-name" placeholder="Enter your name" required />
+                <input type="email" name="email" id="email" placeholder="Enter Your email address" required />
                 <textarea name="message" id="message"
                     placeholder="Hi, i think we need a design system for our system. How soon can we discuss on this?"
                     rows="7" cols="20" required></textarea>
+                    <!-- <div id="spam-filter"  data-netlify-recaptcha="true"></div> -->
                 <input type="submit" value="Send" class="submit" />
+                
             </form>
         </section>
         <footer class="footer">

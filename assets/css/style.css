@@ -814,11 +814,16 @@ textarea {
     transition: border-color 300ms ease, opacity 250ms ease;
 }
 
+/* #spam-filter{
+    margin-bottom: var(--size3);
+} */
+
 input:focus,
 textarea:focus {
     border-color: var(--primary-color);
     opacity: 1;
 }
+
 input:hover,
 textarea:hover {
     opacity: 0.7;
@@ -1046,6 +1051,10 @@ textarea:focus~input.submit {
         text-align: center;
         margin: 0 auto var(--size4) auto;
     }
+
+    .success-checkmark {
+        transform: scale(1.3, 1.3);
+    }
 }
 
 @media screen and (min-width: 766px) {
@@ -1164,6 +1173,10 @@ textarea:focus~input.submit {
     .skills-b {
         margin: 0;
     }
+
+    .success-checkmark {
+        transform: scale(1.5, 1.5);
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1187,6 +1200,10 @@ textarea:focus~input.submit {
     .resume span {
         width: var(--size5);
         height: var(--size5);
+    }
+
+    .success-checkmark {
+        transform: scale(1.7, 1.7);
     }
 
 }
@@ -1240,4 +1257,279 @@ textarea:focus~input.submit {
 
 .container {
     bottom: calc(var(--smallest));
+}
+
+
+
+
+
+
+
+
+/* confirmation page */
+
+.success-container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.success-container h1 {
+    z-index: var(--ahead);
+    color: var(--secondary-color);
+    font-size: var(--size1);
+    opacity: 1;
+    margin: var(--small);
+    transition: opacity 500ms ease;
+}
+.success-container.fxf h1, .fxf .infoox{
+    opacity: 0;
+}
+.success-container p {
+    color: var(--primary-color);
+    opacity: 0.7;
+    padding: 0;
+    margin: 0;
+    font-size: var(--small);
+    height: 100%;
+    transform: translateY(0%);
+    transition: transform 1.2s ease;
+    font-weight: var(--font-weight);
+}
+
+.success-container p.pp1 {
+    transform: translateY(-100%);
+}
+
+.infoox {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 300ms ease;
+}
+
+.infoox::before,
+.infoox::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 48%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+}
+
+.infoox::before {
+    animation: move-r 1.4s linear infinite;
+}
+
+.infoox::after {
+    animation: move-r 2.8s linear 1s infinite;
+}
+
+
+
+
+
+.ggbb .success-checkmark {
+    opacity: 0;
+    transform: scale(0, 0);
+}
+
+/* ======= checkbox ====== */
+.success-checkmark {
+    width: 80px;
+    height: 115px;
+    margin: 0 auto;
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.success-checkmark .check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid var(--secondary-color);
+}
+
+.success-checkmark .check-icon::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+}
+
+.success-checkmark .check-icon::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotate-circle 4.5s ease-in 1.5s;
+}
+
+.success-checkmark .check-icon::before,
+.success-checkmark .check-icon::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    background: var(--base-color);
+    transform: rotate(-45deg);
+}
+
+.success-checkmark .check-icon .icon-line {
+    height: 5px;
+    background-color: var(--secondary-color);
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+.success-checkmark .check-icon .icon-line.line-tip {
+    opacity: 1;
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: icon-line-tip 1s 1.5s;
+}
+
+.rxxx .success-checkmark .check-icon .icon-line.line-tip,
+.rxxx .success-checkmark .check-icon .icon-line {
+    opacity: 0 !important;
+}
+
+.success-checkmark .check-icon .icon-line.line-long {
+    opacity: 1;
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: icon-line-long 1s 1.5s;
+}
+
+.success-checkmark .check-icon .icon-circle {
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 4px solid var(--secondary-color);
+    opacity: 0.7;
+}
+
+.success-checkmark .check-icon .icon-fix {
+    top: 8px;
+    width: 5px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: var(--base-color);
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    5% {
+        transform: rotate(-45deg);
+    }
+
+    12% {
+        transform: rotate(-405deg);
+    }
+
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes icon-line-tip {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+
+    100% {
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+
+@keyframes icon-line-long {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+
+    84% {
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+
+    100% {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}
+
+@keyframes move-r {
+    0% {
+        left: 0;
+    }
+
+    49.99% {
+        left: 100%;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
 }

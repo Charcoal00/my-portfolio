@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <meta property="og:title" content="Code Savant - Web Developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://code-savant.netlify.app" />
+    <meta property="og:image" content="https://code-savant.netlify.app/assets/image/Code savant.png" />
+    <meta property="og:description"
+        content="Christopher Wise, a frontend developer || aspiring fullstack developer building the frontend of website and web applications for the.... Read more" />
+    <meta property="og:site_name" content="Code Savant" />
+    <meta property="og:locale" content="en_US" />
+
+
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Code Savant - Web Developer" />
+    <meta name="twitter:description"
+        content="Christopher Wise, a frontend developer || aspiring fullstack developer building the frontend of website and web applications for the.... Read more" />
+    <meta name="twitter:image" content="https://code-savant.netlify.app/assets/image/Code savant.png" />
+    <meta name="twitter:site" content="@WiseChrist28493" />
+    <meta name="keywords" content="Code Savant, Web Developer, HTML, CSS, JavaScript, UI/UX, React, Christopher Wise" />
+    <meta name="google-site-verification" content="cjs0cfttY_0HNm_9E0heJnOupuqTe8l8OypGdcjRtVk" />
+
+
+    <title>Code Savant</title>
+
+
+    <link rel="shortcut icon" href="assets/image/Code savant.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header class="headder-1" id="headder" style="opacity: 1; display: block;">
+        <nav class="nav-1">
+            <div class="navcontainer1">
+                <a href="#">
+                    <h4>Code Savant</h4>
+                </a>
+            </div>
+            <div class="navcontainer2" style="visibility: hidden; height: 0; width: 0;">
+                <ul class="link-list">
+                    <li class="link-link"><a class="scroll-link activeo" href="#home">Home</a></li>
+                    <li class="link-link"><a href="#about" class="scroll-link">About</a></li>
+                    <li class="link-link"><a href="#skills" class="scroll-link">Skills</a></li>
+                    <li class="link-link">
+                        <a href="#work" class="scroll-link">Work & Project</a>
+                    </li>
+                    <li class="link-link"><a href="#contact" class="scroll-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navcontainer3" style="visibility: hidden; height: 0; width: 0;">
+                <button id="menu-btn">
+                    <span>
+                        <span class="kk-1"></span>
+                        <span class="kk-2"></span>
+                        <span class="kk-3"></span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="success-container fxf">
+        <div class="tick-animation rxxx ggbb">
+            <div class="success-checkmark">
+                <div class="check-icon">
+                    <span class="icon-line line-tip"></span>
+                    <span class="icon-line line-long"></span>
+                    <div class="icon-circle"></div>
+                    <div class="icon-fix"></div>
+                </div>
+            </div>
+        </div>
+        <h1>Thanks for reaching out!</h1>
+        <div class="infoox">
+            <p>Your request will be reviewed and you will be geting a reply from me soon.</p>
+            <p>Please wait, you will be redirected back shortly</p>
+        </div>
+    </div>
+    </main>
+    <script>
+        
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 8000);
+    
+    </script>
+
+    <script>
+
+        setTimeout(() => {
+
+            document.querySelector('.tick-animation').classList.remove('ggbb')
+
+            setTimeout(() => {
+                document.querySelector('.tick-animation').classList.remove('rxxx')
+                setTimeout(() => {
+                    document.querySelector(".success-container").classList.remove('fxf')
+                }, 1200);
+            }, 700);
+        }, 1500);
+        setTimeout(() => {
+
+            document.querySelectorAll('.infoox p').forEach(ps => (
+                ps.classList.add('pp1')
+            ))
+        }, 5000);
+    </script>
+</body>
+
+</html>
